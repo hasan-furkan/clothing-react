@@ -1,19 +1,18 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
-import SignIn from "./routes/sign-in/sign-in.component";
+import Authentication from "./routes/authentication/authentication.component";
 
 const App = () => {
-
-    return (
-        <Routes>
-            <Route element={<Navigation />} path="/" >
-                <Route index element={<Home />} />
-                <Route path="sign-in" element={<SignIn />} />
-            </Route>
-        </Routes>
-    )
-}
+  return (
+    <Routes>
+      <Route element={<Navigation />} path="/">
+        <Route index element={<Home />} />
+        <Route path="auth" element={<Authentication />} />
+      </Route>
+    </Routes>
+  );
+};
 
 export default App;
